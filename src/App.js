@@ -6,6 +6,7 @@ import { CardColumns } from "reactstrap";
 import Greet from "./components/functionGreet";
 import ClassGreet from "./components/classGreet";
 import Post from "./components/postReactstrap";
+import Clock from "./components/Date";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         >
           Learn React
         </a>
+        <Clock />
         <Greet firstName="Melissa" lastName="Castillo" />
         <ClassGreet firstName="Vicente" lastName="Muñoz" />
       </header>
