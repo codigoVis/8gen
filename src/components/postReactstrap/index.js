@@ -10,7 +10,6 @@ import {
   Row,
   Col,
 } from "reactstrap";
-
 const Post = ({ title, text, img }) => {
   return (
     <Container>
@@ -30,5 +29,4 @@ const Post = ({ title, text, img }) => {
     </Container>
   );
 };
-
 export default Post;

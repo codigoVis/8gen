@@ -9,17 +9,11 @@ class Clock extends Component {
       date: new Date().toLocaleTimeString(),
       color: "danger",
       counter: 1,
+      isActive: true,
     };
     this.handleClick = this.handleClick.bind(this);
-    this.firstStateClick = this.firstStateClick.bind(this);
-    this.nextStateClick = this.nextStateClick.bind(this);
   }
-  firstStateClick() {
-    this.setState({ counter: true });
-  }
-  nextStateClick() {
-    this.setState({ counter: false });
-  }
+
   componentDidMount() {
     setInterval(() => {
       this.setState({
@@ -31,24 +25,31 @@ class Clock extends Component {
 
   handleClick() {
     console.log("color normal");
-    let { counter } = this.state;
+    let { counter, isActive } = this.state;
     counter = counter + 1;
+    console.log(isActive);
+    isActive = isActive ? false : true;
     this.setState({
       counter,
+      isActive,
     });
   }
 
   render() {
+    let color = this.state.isActive ? "primary" : "info";
     return (
       <>
-        <h1>{this.state.date}</h1>
+        <h1>
+          <Badge color={color}>{this.state.date}</Badge>
+        </h1>
         <h2>
           <Badge color={this.state.color}>Example</Badge>
         </h2>
-
         <Container>
           <p>{this.state.counter}</p>
-          <Button onClick={this.handleClick}>click me!</Button>
+          <Button color={color} onClick={this.handleClick}>
+            click me!
+          </Button>
         </Container>
       </>
     );
