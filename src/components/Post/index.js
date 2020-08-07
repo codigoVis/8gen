@@ -1,33 +1,44 @@
 import React, { Component } from "react";
-import { CardColumns } from "reactstrap";
-const dataPost = [
+import { Container, Row, Col } from "reactstrap";
+import PostOne from "../postReactstrap/index";
+const arrayPost = [
   {
-    img: "Imagen 1",
-    titulo: "Titulo 1",
-    text: "text 1",
+    img:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-Pz5DNC57W8eF8wEts7ZJD2HcvPKEHMDXZA&usqp=CAU",
+    title: "React",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur efficitur diam vel facilisis. Aliquam molestie dapibus est in porta.",
   },
   {
-    img: "Imagen 2",
-    titulo: "Titulo 2",
-    text: "text 2",
+    img:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-Pz5DNC57W8eF8wEts7ZJD2HcvPKEHMDXZA&usqp=CAU",
+    title: "React",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur efficitur diam vel facilisis. Aliquam molestie dapibus est in porta.",
   },
   {
-    img: "Imagen 3",
-    titulo: "Titulo 3",
-    text: "text 3",
+    img:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-Pz5DNC57W8eF8wEts7ZJD2HcvPKEHMDXZA&usqp=CAU",
+    title: "React",
+    text:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur efficitur diam vel facilisis. Aliquam molestie dapibus est in porta.",
   },
 ];
+class ListPost extends Component {
+  printPoust() {
+    return arrayPost.map(({ img, title, text }) => (
+      <PostOne img={img} title={title} text={text} />
+    ));
+  }
 
-class Post extends Component {
   render() {
-    const ArrayElement = dataPost.map(({ element }, index) => {
-      const upperText = element.toUpperCase();
-      return (
-        <CardColumns key={index} className="card">
-          {upperText}
-        </CardColumns>
-      );
-    });
+    return (
+      <Container>
+        <Row>
+          <Col>{this.printPoust()}</Col>
+        </Row>
+      </Container>
+    );
   }
 }
-console.log(Post);
+export default ListPost;

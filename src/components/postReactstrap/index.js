@@ -9,24 +9,31 @@ import {
   Container,
   Row,
   Col,
+  CardColumns,
 } from "reactstrap";
-const Post = ({ title, text, img }) => {
+const PostOne = ({ title, text, img }) => {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <div>
-            <Card>
-              <CardImg src={img} alt="Card image cap" />
-              <CardBody>
-                <CardTitle>{title}</CardTitle>
-                <CardText>{text}</CardText>
-              </CardBody>
-            </Card>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <CardColumns>
+      <Container>
+        <Row>
+          <Col>
+            <div>
+              <Card className=" text-secondary mt-5">
+                <CardImg
+                  className="img-fluid w-50 h-50 mx-auto"
+                  src={img}
+                  alt="Card image cap"
+                />
+                <CardBody>
+                  <CardTitle>{title}</CardTitle>
+                  <CardText>{text}</CardText>
+                </CardBody>
+              </Card>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </CardColumns>
   );
 };
-export default Post;
+export default PostOne;
