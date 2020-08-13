@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // CSS
-//import "./Input.css";
+import "./input.css";
 
 class Input extends Component {
   constructor(props) {
