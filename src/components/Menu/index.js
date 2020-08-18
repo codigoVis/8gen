@@ -17,12 +17,15 @@ function Menu({ currentPath }) {
         </li>
 
         <li>
-          {currentPath === "currencyConverter" ? (
+          {currentPath === "CurrencyConverter" ? (
             "Conversor de divisas"
           ) : (
-            <Link to="/currencyConverter">Conversor de divisas</Link>
+            <Link to="/CurrencyConverter">Conversor de divisas</Link>
           )}
         </li>
+        <li>CORONAVIRUS</li>
+        <li></li>
+        <li></li>
       </ul>
     </nav>
   );

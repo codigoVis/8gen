@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Input from "../../../../components/input";
 import "./FormKoder.css";
-import Koder from "../..";
+//import Koder from "../..";
 class FormNote extends Component {
   constructor(props) {
     super(props);

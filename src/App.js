@@ -1,5 +1,5 @@
 import React from "react";
-//import "./App.css";
+import "./App.css";
 
 // RRD
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -9,6 +9,8 @@ import NotesBlog from "./screens/NotesBlog";
 import CurrencyConverter from "./screens/CurrencyConverter";
 import Users from "./screens/Users";
 import Koder from "./screens/EjeUserFormNote";
+import Hooks from "./screens/Hooks";
+import Lista from "./components/navbar";
 // Component
 import Menu from "./components/Menu";
 
@@ -36,6 +38,12 @@ function App() {
           </Route>
           <Route path="/koder">
             <Koder />
+          </Route>
+          <Route path="/hooks">
+            <Hooks />
+          </Route>
+          <Route path="/lista">
+            <Lista />
           </Route>
         </Switch>
       </div>
